@@ -43,19 +43,22 @@
         
         //add camera controls
         
-        const camControls = new THREE.PointerLockControls( camera, document.body );
+        const controls = new PointerLockControls( camera, document.body );
 
         controls.addEventListener( 'lock', function () {
+
+	        menu.style.display = 'none';
 
         } );
 
         controls.addEventListener( 'unlock', function () {
 
+	        menu.style.display = 'block';
+
         } );
         
-        camControls.isLocked = false;
+        controls.lock;
         
-
         //make basic plane
         var geo = new THREE.PlaneGeometry(1,1);
         var mat = new defaultMaterialType({wireframe:true});
