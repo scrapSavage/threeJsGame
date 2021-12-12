@@ -45,19 +45,19 @@
         
         const controls = new PointerLockControls( camera, document.body );
 
-        controls.addEventListener( 'lock', function () {
+// add event listener to show/hide a UI (e.g. the game's menu)
 
-	        menu.style.display = 'none';
+controls.addEventListener( 'lock', function () {
 
-        } );
+	menu.style.display = 'none';
 
-        controls.addEventListener( 'unlock', function () {
+} );
 
-	        menu.style.display = 'block';
+controls.addEventListener( 'unlock', function () {
 
-        } );
-        
-        controls.lock;
+	menu.style.display = 'block';
+
+} );
         
         //make basic plane
         var geo = new THREE.PlaneGeometry(1,1);
