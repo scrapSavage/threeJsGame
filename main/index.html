@@ -43,7 +43,7 @@
         
         //add camera controls
         
-        var camControls = new PointerLockControls( camera, document.body );
+        const camControls = new PointerLockControls( camera, document.body );
 
         controls.addEventListener( 'lock', function () {
 
@@ -52,6 +52,8 @@
         controls.addEventListener( 'unlock', function () {
 
         } );
+        
+        camControls.isLocked = false;
         
 
         //make basic plane
