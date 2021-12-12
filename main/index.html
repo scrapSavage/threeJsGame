@@ -43,17 +43,13 @@
         
         //add camera controls
         
-        const controls = new PointerLockControls( camera, document.body );
+        var camControls = new PointerLockControls( camera, document.body );
 
         controls.addEventListener( 'lock', function () {
-
-        menu.style.display = 'none';
 
         } );
 
         controls.addEventListener( 'unlock', function () {
-
-        menu.style.display = 'block';
 
         } );
         
