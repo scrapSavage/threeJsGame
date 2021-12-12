@@ -40,6 +40,23 @@
         var camera = new THREE.PerspectiveCamera(90, window.innerWidth/window.innerHeight, 0.1, 8000);
         //create scene
         var scene = new THREE.Scene();
+        
+        //add camera controls
+        
+        const controls = new PointerLockControls( camera, document.body );
+
+        controls.addEventListener( 'lock', function () {
+
+        menu.style.display = 'none';
+
+        } );
+
+        controls.addEventListener( 'unlock', function () {
+
+        menu.style.display = 'block';
+
+        } );
+        
 
         //make basic plane
         var geo = new THREE.PlaneGeometry(1,1);
