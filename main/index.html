@@ -42,24 +42,6 @@
         //create scene
         var scene = new THREE.Scene();
         
-        //add camera controls
-        
-        const controls = new PointerLockControls( camera, document.body );
-
-// add event listener to show/hide a UI (e.g. the game's menu)
-
-controls.addEventListener( 'lock', function () {
-
-	menu.style.display = 'none';
-
-} );
-
-controls.addEventListener( 'unlock', function () {
-
-	menu.style.display = 'block';
-
-} );
-        
         //make basic plane
         var geo = new THREE.PlaneGeometry(1,1);
         var mat = new defaultMaterialType({wireframe:true});
